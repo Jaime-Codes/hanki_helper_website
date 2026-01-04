@@ -28,10 +28,18 @@ body {
 }
 
 .navbarContainer {
+  width: 100vw;
+  padding: 2.5px 15px;
   position: sticky;
   top: 0;
   background-color: aliceblue;
   box-shadow: 5px 2.5px 2.5px gray;
+}
+
+.navbarContentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .headerTitleImgContainer {
@@ -97,6 +105,17 @@ body {
   background: transparent;
   color: #0080ff;
   font-weight: 700;
+}
+
+.chromeInstallButton {
+  background-color: rgb(153, 17, 255);
+  color: white;
+}
+
+.chromeInstallButton:hover {
+  background-color: rgb(153, 17, 255);
+  color: white;
+  font-weight: 900;
 }
 
 .mainContainer {
