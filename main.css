@@ -18,6 +18,7 @@ body {
   font-size: 3rem;
   color: rgb(225, 133, 133);
 }
+
 .headerContainer {
   display: flex;
   flex-direction: column;
@@ -26,7 +27,7 @@ body {
   justify-content: center;
   align-content: center;
 }
-
+/* navigation bar */
 .navbarContainer {
   width: 100vw;
   padding: 2.5px 15px;
@@ -119,7 +120,9 @@ body {
 }
 
 .mainContainer {
-  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .screenshotContainer {
@@ -145,4 +148,54 @@ body {
 .footerUnorderedList {
   display: flex;
   justify-content: space-evenly;
+}
+
+@media (max-width: 500px) {
+  .mainContainer {
+    /* border: 2px solid blue; */
+    padding: 0 5px;
+  }
+
+  .headerTitleImgContainer {
+    font-size: 0.75rem;
+    width: 50%;
+  }
+
+  .headerImg {
+    height: 35px;
+    width: 35px;
+  }
+
+  .summaryNavbarContainer > svg {
+    width: 35px;
+  }
+
+  /* .navbarContentContainer {
+    display: flex;
+    align-items: center;
+  } */
+
+  .navbarUnorderedList {
+    background-color: aliceblue;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    border: 1px solid black;
+    padding: 0;
+  }
+
+  .navbarListItem {
+    text-align: center;
+  }
+
+  .navbarButton {
+    width: 150px;
+  }
+
+  .underConstruction {
+    font-size: 24px;
+    margin-top: 1rem;
+  }
 }
