@@ -15,7 +15,7 @@ body {
 }
 
 .underConstruction {
-  font-size: 3rem;
+  font-size: 2rem;
   color: rgb(225, 133, 133);
 }
 
@@ -29,12 +29,15 @@ body {
 }
 /* navigation bar */
 .navbarContainer {
-  width: 100vw;
   padding: 2.5px 15px;
   position: sticky;
   top: 0;
   background-color: aliceblue;
   box-shadow: 5px 2.5px 2.5px gray;
+}
+
+.navbarAccordionMobile {
+  display: none;
 }
 
 .navbarContentContainer {
@@ -45,8 +48,12 @@ body {
 
 .headerTitleImgContainer {
   display: flex;
+  justify-content: flex-start;
+  width: 45%;
 }
-
+.headerTitle {
+  width: 60%;
+}
 .headerImg {
   height: 48px;
   width: 48px;
@@ -109,40 +116,63 @@ body {
 }
 
 .chromeInstallButton {
-  background-color: rgb(153, 17, 255);
+  background-color: rgb(85, 8, 144);
   color: white;
 }
 
 .chromeInstallButton:hover {
   background-color: rgb(153, 17, 255);
-  color: white;
   font-weight: 900;
+  color: white;
 }
 
 .mainContainer {
   display: flex;
-  justify-content: center;
+  justify-self: center;
   flex-direction: column;
+  width: 80%;
+}
+.descriptionContainer {
+  justify-items: center;
+  font-family: monospace;
+  /* border: 1px solid black;
+  border-radius: 8px;
+  background-color: #92c3ee; */
+  padding: 1.5rem;
+  text-align: left;
+  color: #5a5454;
+}
+.descriptionContainer h2 {
+  font-size: 1.5rem;
+  font-family: sans-serif;
 }
 
-.screenshotContainer {
-  display: flex;
-  justify-content: center;
-  align-content: flex-start;
+.FAQ_Container {
+  justify-items: center;
 }
 
-.quickDraftsContainer,
-.sidepanelContainer {
+.changeLogContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.sidepanelImage {
-  width: 90%;
+.faqUnorderedList,
+.changeLogUnorderedList {
+  font-family: monospace;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: #fafafa;
+  padding: 1.5rem;
+  width: 80%;
+  text-align: left;
 }
 
-.quickDraftImage {
-  width: 90%;
+.changeLogListItem,
+.faqListItem {
+  /* border: 1px solid red; */
+  padding: 0;
+  list-style: none;
 }
 
 .footerUnorderedList {
@@ -150,30 +180,67 @@ body {
   justify-content: space-evenly;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 700px) and (max-width: 1200px) {
+  .navbarUnorderedListDeskTop {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .headerTitle {
+    font-size: 1.25rem;
+  }
+  .navbarListItem {
+    padding: 2.5px;
+  }
+
+  .navbarButton {
+    text-align: center;
+    padding: 2.5px;
+    margin: 0.5px;
+    min-width: 120px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 700px) {
   .mainContainer {
-    /* border: 2px solid blue; */
-    padding: 0 5px;
+    border: 2px solid blue;
+    padding: 0 10px;
   }
 
   .headerTitleImgContainer {
-    font-size: 0.75rem;
-    width: 50%;
+    font-size: 0.5rem;
+    width: 45%;
   }
 
   .headerImg {
-    height: 35px;
-    width: 35px;
+    height: 25px;
+    width: 25px;
+  }
+
+  .summaryNavbarContainer {
+    border: 1px solid blue;
+    max-height: fit-content;
+    width: fit-content;
   }
 
   .summaryNavbarContainer > svg {
     width: 35px;
+    height: 35px;
+  }
+  .accordionSVG:focus {
+    color: #0080ff;
   }
 
-  /* .navbarContentContainer {
-    display: flex;
-    align-items: center;
-  } */
+  .summaryNavbarContainer::marker {
+    content: "";
+  }
+
+  .navbarDesktop {
+    display: none;
+  }
+  .navbarAccordionMobile {
+    display: block;
+  }
 
   .navbarUnorderedList {
     background-color: aliceblue;
@@ -184,6 +251,9 @@ body {
     margin: 25px;
     border: 1px solid black;
     padding: 0;
+  }
+  .navbarUnorderedListDeskTop {
+    display: none;
   }
 
   .navbarListItem {

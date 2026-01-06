@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hanki - Anki Helper</title>
+    <link href="./reset.css" rel="stylesheet" />
     <link href="./main.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/public/hanki_wink.png" />
   </head>
@@ -12,11 +13,10 @@
       <div class="navbarContentContainer">
         <header class="headerTitleImgContainer">
           <h1 class="headerTitle">Hanki Anki Helper - Draft Notes for Anki</h1>
-
           <img class="headerImg" src="/public/hanki_smile.png" alt="" />
         </header>
 
-        <details>
+        <details class="navbarAccordionMobile">
           <summary class="summaryNavbarContainer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +25,7 @@
               width="100"
               height="100"
               viewBox="0 0 32 32"
+              class="accordionSVG"
             >
               <path
                 d="M 4 7 L 4 9 L 28 9 L 28 7 Z M 4 15 L 4 17 L 28 17 L 28 15 Z M 4 23 L 4 25 L 28 25 L 28 23 Z"
@@ -51,13 +52,31 @@
             </li>
           </ul>
         </details>
+        <ul class="navbarUnorderedList navbarUnorderedListDeskTop">
+          <li class="navbarListItem">
+            <a class="navbarButton" href="#HowTo">How to use</a>
+          </li>
+          <li class="navbarListItem">
+            <a class="navbarButton" href="#FAQ" id="FAQ_navbar">FAQ's</a>
+          </li>
+          <li class="navbarListItem">
+            <a class="navbarButton" href="#ChangeLog">Change Log</a>
+          </li>
+          <li class="navbarListItem">
+            <a
+              href="https://chromewebstore.google.com/detail/hanki-anki-helper-draft-n/dgpdijnffcgpleejkaamgigdngdbodok?authuser=0"
+              class="navbarButton chromeInstallButton"
+              target="_blank"
+              >Install on Chrome</a
+            >
+          </li>
+        </ul>
       </div>
     </nav>
 
     <strong class="underConstruction"
-      >WEBSITE UNDER CONSTRUCTION. Check back for updates soon :) (chrome ext
-      live on chrome store 🍾 1.4.2026)</strong
-    >
+      >WEBSITE UNDER CONSTRUCTION. Check back for updates soon :) 1.6.2025
+    </strong>
     <main class="mainContainer">
       <a
         href="https://chromewebstore.google.com/detail/hanki-anki-helper-draft-n/dgpdijnffcgpleejkaamgigdngdbodok"
@@ -66,101 +85,100 @@
       >
       <p>Found bugs? email hanki_helper@aol.com</p>
 
-      <div class="">
+      <div class="descriptionContainer">
         <h2>Think first. Sync later.</h2>
         <p>
           Notes first. Cards later. Hanki Helper is a browser extension that
           allows you to take draft notes right in the browser and later sync to
-          Anki or delete, all without leaving the browser.
+          Anki or delete, all without leaving the browser. Avoid context
+          switching and draft as many cards as you want without the worry of
+          adding them straight into your Anki.
         </p>
-        <div class="HowTo_Container">
-          <h2 id="HowTo">How to Use</h2>
-        </div>
-        <div class="FAQ_Container">
-          <h2 id="FAQ">Frequently Asked Questions</h2>
-          <ul>
-            <li>
-              <div class="faqitemContainer">
-                <h3>Do I need to create an account?</h3>
-                <p>
-                  No, as soon as you install Hanki Anki Helper, you will be able
-                  to start saving notes locally. Syncing notes to anki requires
-                  the Anki app to be installed with AnkiConnect
-                </p>
-                <a href="https://apps.ankiweb.net/">Learn more</a>
-              </div>
-            </li>
-            <li>
-              <div class="faqitemContainer">
-                <h3>What is AnkiConnect?</h3>
-                <p>
-                  AnkiConnect enables external applications (like Hanki) to
-                  communicate with Anki over a simple HTTP API.
-                </p>
-                <a href="https://ankiweb.net/shared/info/2055492159"
-                  >Learn more</a
-                >
-              </div>
-            </li>
-            <li>
-              <div class="faqitemContainer">
-                <h3>What data is collected?</h3>
-                <p>
-                  Everything is stored locally on your machine. No sign in, no
-                  tracking.
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <div class="faqitemContainer">
-                <h3>Where are my notes stored?</h3>
-                <p>
-                  Notes are stored locally on your machine using Chrome's local
-                  storage
-                </p>
-                <a
-                  href="https://developer.chrome.com/docs/devtools/storage/localstorage"
-                  >Learn more</a
-                >
-              </div>
-            </li>
-            <li>
-              <div class="faqitemContainer">
-                <h3>I deleted a note on Hanki, can I get it back?</h3>
-                <p>No. Currently notes that are deleted are gone forever.</p>
-                <a
-                  href="https://developer.chrome.com/docs/devtools/storage/localstorage"
-                  >Learn more</a
-                >
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="changeLogContainer">
-          <h2 id="ChangeLog">Change Log</h2>
-          <ul>
-            <li>
-              <h4>1.4.2025</h4>
-              <span>🍾</span>
-              <p>chrome ext live on chrome store</p>
-            </li>
-            <li>
-              <h4>1.2.2025</h4>
-              <span>✨</span>
-              <p>Hanki Anki Helper - Draft Notes for Anki: Pending Review</p>
-            </li>
-            <li>
-              <h4>12.31.2025</h4>
-              <span>✨</span>
+      </div>
+      <div class="HowTo_Container">
+        <h2 id="HowTo">How to Use</h2>
+      </div>
+      <div class="FAQ_Container">
+        <h2 id="FAQ">Frequently Asked Questions</h2>
+        <ul class="faqUnorderedList">
+          <li class="faqListItem">
+            <div class="faqitemContainer">
+              <h3>Do I need to create an account?</h3>
               <p>
-                Hanki Anki Helper - Draft Notes for Anki submitted to Chrome Web
-                Store for review
+                No, as soon as you install Hanki Anki Helper, you will be able
+                to start saving notes locally. Syncing notes to anki requires
+                the Anki app to be installed with AnkiConnect
               </p>
-            </li>
-          </ul>
-        </div>
+              <a href="https://apps.ankiweb.net/">Learn more</a>
+            </div>
+          </li>
+          <li class="faqListItem">
+            <div class="faqitemContainer">
+              <h3>What is AnkiConnect?</h3>
+              <p>
+                AnkiConnect enables external applications (like Hanki) to
+                communicate with Anki over a simple HTTP API.
+              </p>
+              <a href="https://ankiweb.net/shared/info/2055492159"
+                >Learn more</a
+              >
+            </div>
+          </li>
+          <li class="faqListItem">
+            <div class="faqitemContainer">
+              <h3>What data is collected?</h3>
+              <p>
+                Everything is stored locally on your machine. No sign in, no
+                tracking.
+              </p>
+            </div>
+          </li>
+
+          <li class="faqListItem">
+            <div class="faqitemContainer">
+              <h3>Where are my notes stored?</h3>
+              <p>
+                Notes are stored locally on your machine using Chrome's local
+                storage
+              </p>
+              <a
+                href="https://developer.chrome.com/docs/devtools/storage/localstorage"
+                >Learn more</a
+              >
+            </div>
+          </li>
+          <li class="faqListItem">
+            <div class="faqitemContainer">
+              <h3>I deleted a note on Hanki, can I get it back?</h3>
+              <p>No. Currently notes that are deleted are gone forever.</p>
+              <a
+                href="https://developer.chrome.com/docs/devtools/storage/localstorage"
+                >Learn more</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="changeLogContainer">
+        <h2 id="ChangeLog">Change Log</h2>
+        <ul class="changeLogUnorderedList">
+          <li class="changeLogListItem">
+            <h4>1.4.2025 🍾</h4>
+            <p>chrome ext live on chrome store</p>
+          </li>
+          <li class="changeLogListItem">
+            <h4>1.2.2025 ✨</h4>
+            <p>Hanki Anki Helper - Draft Notes for Anki: Pending Review</p>
+          </li>
+          <li class="changeLogListItem">
+            <h4>12.31.2025 ✨</h4>
+            <p>
+              Hanki Anki Helper - Draft Notes for Anki submitted to Chrome Web
+              Store for review
+            </p>
+          </li>
+        </ul>
       </div>
 
       <footer class="footerContainer">
