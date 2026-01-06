@@ -126,14 +126,15 @@ body {
   color: white;
 }
 
-.mainContainer {
+body {
   display: flex;
-  justify-self: center;
+  justify-items: center;
   flex-direction: column;
-  width: 80%;
 }
 .descriptionContainer {
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: monospace;
   /* border: 1px solid black;
   border-radius: 8px;
@@ -146,9 +147,18 @@ body {
   font-size: 1.5rem;
   font-family: sans-serif;
 }
+.descriptionParagraph {
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: #fafafa;
+  padding: 1.5rem;
+}
 
 .FAQ_Container {
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .changeLogContainer {
