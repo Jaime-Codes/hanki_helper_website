@@ -52,7 +52,7 @@ body {
   width: 45%;
 }
 .headerTitle {
-  width: 60%;
+  width: fit-content;
 }
 .headerImg {
   height: 48px;

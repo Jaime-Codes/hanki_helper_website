@@ -9,22 +9,57 @@
   </head>
   <body>
     <nav class="navbarContainer">
-      <ul class="navbarUnorderedList">
-        <li class="navbarListItemHome">
-          <a class="navbarButton" href="../index.html">Home</a>
-        </li>
-        <li class="navbarListItem">
-          <a class="navbarButton" href="#FAQ" id="FAQ_navbar">FAQ's</a>
-        </li>
-        <li class="navbarListItem">
-          <a class="navbarButton" href="#HowTo" id="HowTo_navbar">How to use</a>
-        </li>
-        <li class="navbarListItem">
-          <a href="#" class="navbarButton" id="chromeInstall_navbar"
-            >Install on Chrome</a
-          >
-        </li>
-      </ul>
+      <div class="navbarContentContainer">
+        <header class="headerTitleImgContainer">
+          <h1 class="headerTitle">Hanki Anki Helper - Draft Notes for Anki</h1>
+          <img class="headerImg" src="/public/hanki_smile.png" alt="" />
+        </header>
+
+        <details class="navbarAccordionMobile">
+          <summary class="summaryNavbarContainer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="100"
+              height="100"
+              viewBox="0 0 32 32"
+              class="accordionSVG"
+            >
+              <path
+                d="M 4 7 L 4 9 L 28 9 L 28 7 Z M 4 15 L 4 17 L 28 17 L 28 15 Z M 4 23 L 4 25 L 28 25 L 28 23 Z"
+              ></path>
+            </svg>
+          </summary>
+          <ul class="navbarUnorderedList">
+            <li class="navbarListItem">
+              <a class="navbarButton" href="../index.html">Home</a>
+            </li>
+
+            <li class="navbarListItem">
+              <a
+                href="https://chromewebstore.google.com/detail/hanki-anki-helper-draft-n/dgpdijnffcgpleejkaamgigdngdbodok?authuser=0"
+                class="navbarButton chromeInstallButton"
+                target="_blank"
+                >Install on Chrome</a
+              >
+            </li>
+          </ul>
+        </details>
+        <ul class="navbarUnorderedList navbarUnorderedListDeskTop">
+          <li class="navbarListItemHome">
+            <a class="navbarButton" href="../index.html">Home</a>
+          </li>
+          <li class="navbarListItem">
+            <a
+              href="https://chromewebstore.google.com/detail/hanki-anki-helper-draft-n/dgpdijnffcgpleejkaamgigdngdbodok?authuser=0"
+              class="navbarButton chromeInstallButton"
+              target="_blank"
+              >Install on Chrome</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
     <div>
       <h1>How To Use (Work in progress)</h1>
@@ -50,10 +85,10 @@
           <a href="mailto:anki_helper@aol.com">Contact: 📧</a>
         </li>
         <li class="footerListItem">
-          <a href="./pages/privacyPolicy.html">Privacy Policy</a>
+          <a href="privacyPolicy.html">Privacy Policy</a>
         </li>
         <li class="footerListItem">
-          <a href="./pages/termsOfService.html">Terms of Service</a>
+          <a href="termsOfService.html">Terms of Service</a>
         </li>
       </ul>
     </footer>
