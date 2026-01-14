@@ -116,18 +116,18 @@ body {
 }
 
 .chromeInstallButton {
-  background-color: rgb(85, 8, 144);
+  background-color: rgb(2, 75, 147);
   color: white;
 }
 
 .chromeInstallButton:hover {
-  background-color: rgb(153, 17, 255);
+  background-color: rgb(4, 62, 121);
   font-weight: 900;
   color: white;
 }
 
 body {
-  display: flex;
+display: flex;
   justify-items: center;
   flex-direction: column;
 }
