@@ -49,10 +49,11 @@ body {
 .headerTitleImgContainer {
   display: flex;
   justify-content: flex-start;
-  width: 45%;
+  width: fit-content;
 }
 .headerTitle {
   width: fit-content;
+  text-wrap: auto;
 }
 .headerImg {
   height: 48px;
@@ -127,18 +128,18 @@ body {
 }
 
 body {
-display: flex;
+  display: flex;
   justify-items: center;
   flex-direction: column;
 }
-.descriptionContainer {
+.descriptionContainer,
+.FAQ_Container,
+.changeLogContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: monospace;
-  /* border: 1px solid black;
-  border-radius: 8px;
-  background-color: #92c3ee; */
+  margin: 0 5rem;
   padding: 1.5rem;
   text-align: left;
   color: #5a5454;
@@ -148,23 +149,10 @@ display: flex;
   font-family: sans-serif;
 }
 .descriptionParagraph {
-  width: 80%;
   border: 1px solid black;
   border-radius: 8px;
   background-color: #fafafa;
   padding: 1.5rem;
-}
-
-.FAQ_Container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.changeLogContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .faqUnorderedList,
@@ -174,7 +162,7 @@ display: flex;
   border-radius: 8px;
   background-color: #fafafa;
   padding: 1.5rem;
-  width: 80%;
+  min-width: 85vw;
   text-align: left;
 }
 
@@ -194,12 +182,18 @@ display: flex;
   .navbarUnorderedListDeskTop {
     display: flex;
     flex-wrap: wrap;
+    flex-basis: 50%;
   }
   .headerTitle {
     font-size: 1.25rem;
   }
   .navbarListItem {
     padding: 2.5px;
+  }
+
+  .headerImg {
+    height: 32px;
+    width: 32px;
   }
 
   .navbarButton {
@@ -219,7 +213,6 @@ display: flex;
 
   .headerTitleImgContainer {
     font-size: 0.5rem;
-    width: 45%;
   }
 
   .headerImg {
@@ -228,7 +221,6 @@ display: flex;
   }
 
   .summaryNavbarContainer {
-    border: 1px solid blue;
     max-height: fit-content;
     width: fit-content;
   }
@@ -242,7 +234,7 @@ display: flex;
   }
 
   .summaryNavbarContainer::marker {
-    content: "";
+    content: none;
   }
 
   .navbarDesktop {

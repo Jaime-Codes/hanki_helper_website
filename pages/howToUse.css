@@ -130,3 +130,72 @@ body {
   width: 600px;
   height: auto;
 }
+
+@media (max-width: 700px) {
+  .mainContainer {
+    border: 2px solid blue;
+    padding: 0 10px;
+  }
+
+  .headerTitleImgContainer {
+    font-size: 0.5rem;
+    width: 45%;
+  }
+
+  .headerImg {
+    height: 25px;
+    width: 25px;
+  }
+
+  .summaryNavbarContainer {
+    
+    max-height: fit-content;
+    width: fit-content;
+  }
+
+  .summaryNavbarContainer > svg {
+    width: 35px;
+    height: 35px;
+  }
+  .accordionSVG:focus {
+    color: #0080ff;
+  }
+
+  .summaryNavbarContainer::marker {
+    content: none;
+  }
+
+  .navbarDesktop {
+    display: none;
+  }
+  .navbarAccordionMobile {
+    display: block;
+  }
+
+  .navbarUnorderedList {
+    background-color: aliceblue;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    border: 1px solid black;
+    padding: 0;
+  }
+  .navbarUnorderedListDeskTop {
+    display: none;
+  }
+
+  .navbarListItem {
+    text-align: center;
+  }
+
+  .navbarButton {
+    width: 150px;
+  }
+
+  .underConstruction {
+    font-size: 24px;
+    margin-top: 1rem;
+  }
+}
