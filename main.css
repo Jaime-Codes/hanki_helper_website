@@ -55,9 +55,24 @@ body {
   width: fit-content;
   text-wrap: auto;
 }
+
 .headerImg {
   height: 48px;
   width: 48px;
+  /* Apply the animation properties */
+  animation: bob 2s infinite alternate ease-in-out;
+}
+
+/* Define the animation sequence */
+@keyframes bob {
+  0% {
+    /* Start position (original vertical position) */
+    transform: translateY(0);
+  }
+  100% {
+    /* End position (move up by 20 pixels) */
+    transform: translateY(-10px);
+  }
 }
 
 .navbarUnorderedList {
@@ -137,15 +152,15 @@ body {
 .changeLogContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   font-family: monospace;
-  margin: 0 5rem;
   padding: 1.5rem;
   text-align: left;
   color: #5a5454;
 }
-.descriptionContainer h2 {
+h2 {
   font-size: 1.5rem;
+  align-self: center;
   font-family: sans-serif;
 }
 .descriptionParagraph {
@@ -157,12 +172,10 @@ body {
 
 .faqUnorderedList,
 .changeLogUnorderedList {
-  font-family: monospace;
   border: 1px solid black;
   border-radius: 8px;
   background-color: #fafafa;
   padding: 1.5rem;
-  min-width: 85vw;
   text-align: left;
 }
 
