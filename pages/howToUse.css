@@ -191,6 +191,11 @@ li {
     width: 25px;
   }
 
+  .hankiImg {
+    width: 80%;
+    height: auto;
+  }
+
   .summaryNavbarContainer {
     max-height: fit-content;
     width: fit-content;
