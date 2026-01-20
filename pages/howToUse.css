@@ -10,7 +10,7 @@
 
 /* 2. Remove default margin */
 body {
-  font-family: "ui-sans-serif, system-ui, sans-serif";
+  font-family: "monospace, ui-sans-serif, system-ui, sans-serif";
   background-color: aliceblue;
 }
 
@@ -22,6 +22,19 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-variant: small-caps;
+  margin: 0;
+}
+
+.stepSecondTitle {
+  display: block;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
 .underConstruction {
@@ -141,7 +154,28 @@ li {
   height: auto;
 }
 
+.stepListItem {
+  margin: 3.5rem 0;
+}
+
+.stepOneListItemDiv {
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: #fafafa;
+  padding: 1.5rem;
+}
+.stepListItemDiv {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: #fafafa;
+  padding: 1.5rem;
+}
+
 @media (max-width: 700px) {
+  .stepListItemDiv {
+    display: block;
+  }
   .mainContainer {
     border: 2px solid blue;
     padding: 0 10px;
