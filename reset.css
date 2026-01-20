@@ -31,7 +31,11 @@ ul[role="list"],
 ol[role="list"] {
   list-style: none;
 }
-
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
 /* Set core body defaults */
 body {
   min-height: 100vh;
