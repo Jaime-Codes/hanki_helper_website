@@ -182,8 +182,7 @@ ol {
   .stepListItemDiv {
     display: block;
   }
-  .mainContainer {
-    border: 2px solid blue;
+  .main {
     padding: 0 10px;
   }
 
