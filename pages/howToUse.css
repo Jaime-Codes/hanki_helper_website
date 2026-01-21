@@ -30,6 +30,9 @@ ol {
   padding: 0;
 }
 
+h1 {
+  padding: 0;
+}
 .stepTitle {
   font-size: 1.25rem;
   font-weight: 800;
@@ -80,12 +83,26 @@ ol {
   justify-content: flex-start;
   width: 45%;
 }
+
 .headerTitle {
   width: fit-content;
 }
+
 .headerImg {
   height: 48px;
   width: 48px;
+  animation: bob 2s infinite alternate ease-in-out;
+}
+
+@keyframes bob {
+  0% {
+    /* Start position (original vertical position) */
+    transform: translateY(0);
+  }
+  100% {
+    /* End position (move up by 20 pixels) */
+    transform: translateY(-5px);
+  }
 }
 
 .navbarUnorderedList {
@@ -209,6 +226,7 @@ ol {
   .summaryNavbarContainer {
     max-height: fit-content;
     width: fit-content;
+    list-style: none;
   }
 
   .summaryNavbarContainer > svg {
