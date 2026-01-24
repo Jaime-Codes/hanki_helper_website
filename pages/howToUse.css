@@ -38,11 +38,6 @@ h1 {
   font-weight: 800;
   font-variant: small-caps;
   margin: 0;
-}
-
-.stepSecondTitle {
-  display: block;
-  font-style: italic;
   margin-bottom: 1rem;
 }
 
@@ -175,6 +170,7 @@ h1 {
 .hankiImg {
   width: 600px;
   height: auto;
+  padding: 0 2rem;
 }
 
 .stepListItem {
@@ -201,9 +197,6 @@ h1 {
     align-items: center;
   }
 
-  .hankiImg {
-    padding-bottom: 0.5rem;
-  }
   .main {
     padding: 0 10px;
   }
@@ -221,6 +214,8 @@ h1 {
   .hankiImg {
     width: 100%;
     height: auto;
+    padding: 0;
+    margin-bottom: 1rem;
   }
 
   .summaryNavbarContainer {
