@@ -1,43 +1,33 @@
-/* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
 :root {
   scroll-behavior: smooth;
+
+  --bg-main: aliceblue;
+  --bg-card: #fafafa;
+  --primary: #0080ff;
+  --primary-dark: rgb(2, 75, 147);
+  --text-muted: #5a5454;
 }
 
-/* 2. Remove default margin */
 body {
-  font-family: "ui-sans-serif, system-ui, sans-serif";
-  background-color: aliceblue;
-}
-
-.underConstruction {
-  font-size: 2rem;
-  color: rgb(225, 133, 133);
-}
-
-.headerContainer {
+  font-family: monospace;
+  background-color: var(--bg-main);
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-/* navigation bar */
-.navbarContainer {
-  padding: 2.5px 15px;
-  position: sticky;
-  top: 0;
-  background-color: aliceblue;
-  box-shadow: 0px 2.5px 1.5px gray;
 }
 
-.navbarAccordionMobile {
-  display: none;
+.navbarContainer {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 2.5px 15px;
+  background-color: var(--bg-main);
+  box-shadow: 0 2.5px 1.5px gray;
 }
 
 .navbarContentContainer {
@@ -48,12 +38,7 @@ body {
 
 .headerTitleImgContainer {
   display: flex;
-  justify-content: flex-start;
-  width: fit-content;
-}
-.headerTitle {
-  width: fit-content;
-  text-wrap: auto;
+  align-items: center;
 }
 
 .headerImg {
@@ -63,225 +48,107 @@ body {
 }
 
 @keyframes bob {
-  0% {
-    /* Start position (original vertical position) */
+  from {
     transform: translateY(0);
   }
-  100% {
-    /* End position (move up by 20 pixels) */
+  to {
     transform: translateY(-5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .headerImg {
+    animation: none;
   }
 }
 
 .navbarUnorderedList {
   display: flex;
-  justify-content: flex-end;
   margin: 25px;
 }
 
-.navbarListItem,
-.footerListItem,
-.navbarListItemHome {
+.navbarListItem {
   list-style: none;
   padding: 5px;
 }
 
-.navbarListItemHome {
-  margin-right: auto;
-}
-
 .navbarButton {
   display: block;
-  color: inherit;
-  text-decoration: none;
-  background-color: transparent;
-  font-size: 1rem;
-  height: auto;
-  width: fit-content;
   padding: 10px 5px;
-  opacity: 0.75;
-  font-weight: 600;
-  cursor: pointer;
   border: 2px solid black;
   border-radius: 8px;
-}
-
-.navbarButtonActive {
-  display: block;
   text-decoration: none;
-  background-color: transparent;
-  font-size: 1rem;
-  height: auto;
-  width: fit-content;
-  padding: 10px 5px;
-  opacity: 1;
-  color: white;
-  background-color: #0080ff;
-  font-weight: 700;
-  cursor: pointer;
-  /* border: 2px solid black; */
-  border-radius: 8px;
+  color: inherit;
+  font-weight: 600;
+  opacity: 0.75;
 }
 
 .navbarButton:hover {
-  background: transparent;
-  color: #0080ff;
+  color: var(--primary);
   font-weight: 700;
 }
 
+.navbarButton:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .chromeInstallButton {
-  background-color: rgb(2, 75, 147);
+  background-color: var(--primary-dark);
   color: white;
 }
 
 .chromeInstallButton:hover {
   background-color: rgb(4, 62, 121);
-  font-weight: 900;
-  color: white;
 }
 
-body {
-  display: flex;
-  justify-items: center;
-  flex-direction: column;
-}
 .descriptionContainer,
 .FAQ_Container,
 .changeLogContainer {
-  display: flex;
-  flex-direction: column;
-  font-family: monospace;
   padding: 1.5rem;
-  text-align: left;
-  color: #5a5454;
+  color: var(--text-muted);
 }
 
 .titleHeader {
-  font-size: 1.5rem;
-  align-self: center;
-  font-family: sans-serif;
+  text-align: center;
   padding-bottom: 0.75rem;
 }
 
-.descriptionParagraph {
-  border: 1px solid black;
-  border-radius: 8px;
-  background-color: #fafafa;
-  padding: 1.5rem;
-}
-
+.descriptionParagraph,
 .faqUnorderedList,
 .changeLogUnorderedList {
+  background-color: var(--bg-card);
   border: 1px solid black;
   border-radius: 8px;
-  background-color: #fafafa;
   padding: 1.5rem;
-  text-align: left;
-}
-
-.changeLogListItem,
-.faqListItem {
-  /* border: 1px solid red; */
-  padding: 0;
-  list-style: none;
 }
 
 .footerUnorderedList {
   display: flex;
   justify-content: space-evenly;
+  list-style: none;
+  padding: 1rem;
 }
 
-@media (min-width: 700px) and (max-width: 1200px) {
-  .navbarUnorderedListDeskTop {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 50%;
-  }
-  .headerTitle {
-    font-size: 1.25rem;
-  }
-  .navbarListItem {
-    padding: 2.5px;
-  }
-
-  .headerImg {
-    height: 32px;
-    width: 32px;
-  }
-
-  .navbarButton {
-    text-align: center;
-    padding: 2.5px;
-    margin: 0.5px;
-    min-width: 120px;
-    font-size: 0.75rem;
-  }
+.navbarAccordionMobile {
+  display: none;
 }
 
 @media (max-width: 700px) {
-  .mainContainer {
-    border: 2px solid blue;
-    padding: 0 10px;
-  }
-
-  .headerTitleImgContainer {
-    font-size: 0.5rem;
-  }
-
-  .headerImg {
-    height: 25px;
-    width: 25px;
-  }
-
-  .summaryNavbarContainer {
-    max-height: fit-content;
-    width: fit-content;
-    list-style: none;
-  }
-
-  .summaryNavbarContainer > svg {
-    width: 35px;
-    height: 35px;
-  }
-  .accordionSVG:focus {
-    color: #0080ff;
-  }
-
-  .summaryNavbarContainer::marker {
-    content: none;
-  }
-
-  .navbarDesktop {
+  .navbarUnorderedListDeskTop {
     display: none;
   }
+
   .navbarAccordionMobile {
     display: block;
   }
 
   .navbarUnorderedList {
-    background-color: aliceblue;
     position: absolute;
     right: 10px;
-    display: flex;
     flex-direction: column;
-    margin: 25px;
+    background-color: var(--bg-main);
     border: 1px solid black;
     padding: 0;
-  }
-  .navbarUnorderedListDeskTop {
-    display: none;
-  }
-
-  .navbarListItem {
-    text-align: center;
-  }
-
-  .navbarButton {
-    width: 150px;
-  }
-
-  .underConstruction {
-    font-size: 24px;
-    margin-top: 1rem;
   }
 }

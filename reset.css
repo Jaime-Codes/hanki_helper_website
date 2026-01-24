@@ -35,11 +35,13 @@ ul,
 ol {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 /* Set core body defaults */
 body {
   min-height: 100vh;
   line-height: 1.5;
+  font-family: monospace;
 }
 
 /* Set shorter line heights on headings and interactive elements */

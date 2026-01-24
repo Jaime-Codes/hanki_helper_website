@@ -4,34 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hanki - Anki Helper</title>
+
     <link href="./reset.css" rel="stylesheet" />
     <link href="./main.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/public/hanki_wink.png" />
   </head>
+
   <body>
-    <nav class="navbarContainer">
+    <nav class="navbarContainer" aria-label="Primary navigation">
       <div class="navbarContentContainer">
         <header class="headerTitleImgContainer">
           <h1 class="headerTitle">Hanki Anki Helper - Draft Notes for Anki</h1>
-          <img class="headerImg" src="/public/hanki_smile.png" alt="" />
+          <img
+            class="headerImg"
+            src="/public/hanki_smile.png"
+            alt="Hanki mascot smiling"
+          />
         </header>
 
+        <!-- Mobile Nav -->
         <details class="navbarAccordionMobile">
           <summary class="summaryNavbarContainer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              width="100"
-              height="100"
               viewBox="0 0 32 32"
               class="accordionSVG"
+              aria-hidden="true"
             >
               <path
-                d="M 4 7 L 4 9 L 28 9 L 28 7 Z M 4 15 L 4 17 L 28 17 L 28 15 Z M 4 23 L 4 25 L 28 25 L 28 23 Z"
+                d="M 4 7 L 4 9 L 28 9 L 28 7 Z
+                   M 4 15 L 4 17 L 28 17 L 28 15 Z
+                   M 4 23 L 4 25 L 28 25 L 28 23 Z"
               ></path>
             </svg>
           </summary>
+
           <ul class="navbarUnorderedList">
             <li class="navbarListItem">
               <a class="navbarButton" href="pages/howToUse.html">How to use</a>
@@ -47,11 +54,15 @@
                 href="https://chromewebstore.google.com/detail/hanki-anki-helper-draft-n/dgpdijnffcgpleejkaamgigdngdbodok?authuser=0"
                 class="navbarButton chromeInstallButton"
                 target="_blank"
-                >Install on Chrome</a
+                rel="noopener noreferrer"
               >
+                Install on Chrome
+              </a>
             </li>
           </ul>
         </details>
+
+        <!-- Desktop Nav -->
         <ul class="navbarUnorderedList navbarUnorderedListDeskTop">
           <li class="navbarListItem">
             <a class="navbarButton" href="pages/howToUse.html">How to use</a>
@@ -67,15 +78,17 @@
               href="https://chromewebstore.google.com/detail/hanki-anki-helper-draft-n/dgpdijnffcgpleejkaamgigdngdbodok?authuser=0"
               class="navbarButton chromeInstallButton"
               target="_blank"
-              >Install on Chrome</a
+              rel="noopener noreferrer"
             >
+              Install on Chrome
+            </a>
           </li>
         </ul>
       </div>
     </nav>
 
     <main>
-      <div class="descriptionContainer">
+      <section class="descriptionContainer">
         <h2 class="titleHeader">Think first. Sync later.</h2>
         <p class="descriptionParagraph">
           Notes first. Cards later. Hanki Helper is a browser extension that
@@ -84,9 +97,11 @@
           switching and draft as many cards as you want without the worry of
           adding them straight into your Anki.
         </p>
-      </div>
-      <div class="FAQ_Container">
+      </section>
+
+      <section class="FAQ_Container">
         <h2 id="FAQ" class="titleHeader">Frequently Asked Questions</h2>
+
         <ul class="faqUnorderedList">
           <li class="faqListItem">
             <div class="faqitemContainer">
@@ -96,9 +111,16 @@
                 to start saving notes locally. Syncing notes to anki requires
                 the Anki app to be installed with AnkiConnect
               </p>
-              <a href="https://apps.ankiweb.net/">Learn more</a>
+              <a
+                href="https://apps.ankiweb.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn more
+              </a>
             </div>
           </li>
+
           <li class="faqListItem">
             <div class="faqitemContainer">
               <h3>What is AnkiConnect?</h3>
@@ -106,11 +128,16 @@
                 AnkiConnect enables external applications (like Hanki) to
                 communicate with Anki over a simple HTTP API.
               </p>
-              <a href="https://ankiweb.net/shared/info/2055492159"
-                >Learn more</a
+              <a
+                href="https://ankiweb.net/shared/info/2055492159"
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                Learn more
+              </a>
             </div>
           </li>
+
           <li class="faqListItem">
             <div class="faqitemContainer">
               <h3>What data is collected?</h3>
@@ -130,25 +157,33 @@
               </p>
               <a
                 href="https://developer.chrome.com/docs/devtools/storage/localstorage"
-                >Learn more</a
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                Learn more
+              </a>
             </div>
           </li>
+
           <li class="faqListItem">
             <div class="faqitemContainer">
               <h3>I deleted a note on Hanki, can I get it back?</h3>
               <p>No. Currently notes that are deleted are gone forever.</p>
               <a
                 href="https://developer.chrome.com/docs/devtools/storage/localstorage"
-                >Learn more</a
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                Learn more
+              </a>
             </div>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="changeLogContainer">
+      <section class="changeLogContainer">
         <h2 id="ChangeLog" class="titleHeader">Change Log</h2>
+
         <ul class="changeLogUnorderedList">
           <li class="changeLogListItem">
             <h4>1.6.2025 🐛</h4>
@@ -170,7 +205,7 @@
             </p>
           </li>
         </ul>
-      </div>
+      </section>
 
       <footer class="footerContainer">
         <ul class="footerUnorderedList">
@@ -186,6 +221,7 @@
         </ul>
       </footer>
     </main>
+
     <script src="javascript/index.js"></script>
   </body>
 </html>
