@@ -171,6 +171,7 @@ h1 {
   width: 600px;
   height: auto;
   padding: 0 2rem;
+  border-radius: 8px;
 }
 
 .stepListItem {
@@ -203,7 +204,7 @@ h1 {
 
   .headerTitleImgContainer {
     font-size: 0.5rem;
-    width: 45%;
+    width: 60%;
   }
 
   .headerImg {
@@ -216,6 +217,7 @@ h1 {
     height: auto;
     padding: 0;
     margin-bottom: 1rem;
+    border-radius: 8px;
   }
 
   .summaryNavbarContainer {
